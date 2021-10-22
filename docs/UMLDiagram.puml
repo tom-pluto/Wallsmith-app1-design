@@ -1,0 +1,42 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class ToDoEntry {
+' a specific entry that shows up in the to-do lists
+
+- String description
+- String dueDate
+
++ getDescription(): String
++ setDescription(String): void
++ getDueDate(): String
++ setDueDate(String): void
+
+}
+
+class ToDoList {
+' the to-do list
+
+- String title
+- List<ToDoEntry> entries
+
++ getTitle(): String
++ setTitle(String): String
++ addItem(ToDoListEntry): void
++ removeItem(int): void
++ getList(): List<ToDoListEntry>
+
+
+}
+
+class Application {
+
+    + main(String[] args)
+    + start(Stage stage)
+
+}
+
+ToDoList o-- ToDoEntry
+Application -- ToDoList
+
+@enduml

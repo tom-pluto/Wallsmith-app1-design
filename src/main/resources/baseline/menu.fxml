@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="baseline.MenuController">
+   <center>
+       <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+           <Tab text="Todo List 1 ">
+            <content>
+               <SplitPane dividerPositions="0.7341040462427746" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+                 <items>
+                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                        <children>
+                           <TableView fx:id="table" prefHeight="274.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        </children>
+                     </AnchorPane>
+                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="33.0" prefWidth="600.0" SplitPane.resizableWithParent="false">
+                        <children>
+                           <HBox layoutX="50.0" prefHeight="66.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="0.0">
+                              <children>
+                                 <StackPane prefHeight="66.0" prefWidth="250.0">
+                                    <children>
+                                       <TextField prefHeight="25.0" prefWidth="115.0" promptText="Description" />
+                                    </children>
+                                 </StackPane>
+                                 <StackPane prefHeight="66.0" prefWidth="168.0">
+                                    <children>
+                                       <DatePicker promptText="Due Date" />
+                                    </children>
+                                 </StackPane>
+                                 <StackPane prefHeight="66.0" prefWidth="102.0">
+                                    <children>
+                                       <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="56.0" text="Add" />
+                                    </children>
+                                 </StackPane>
+                              </children>
+                           </HBox>
+                        </children>
+                     </AnchorPane>
+                 </items>
+               </SplitPane>
+            </content>
+           </Tab>
+       </TabPane>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Exit" />
+                  <MenuItem mnemonicParsing="false" text="Save to File" />
+                  <MenuItem mnemonicParsing="false" text="Load from File" />
+                  <MenuItem mnemonicParsing="false" text="New" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
