@@ -22,12 +22,25 @@ class ToDoList {
 
 + getTitle(): String
 + setTitle(String): String
-+ addItem(ToDoListEntry): void
-+ removeItem(int): void
-+ getList(): List<ToDoListEntry>
 
++ getEntry(int): ToDoEntry
++ setEntry(int, ToDoEntry): void
++ removeEntry(int): void
+
++ getList(): List<ToDoEntry>
 
 }
+
+'class ToDoManager {
+'
+'   - int numToDoList
+'   - List<ToDoList> list
+'
+'   + addToDoList(String): void
+'   + removeToDoList(int): void
+'   + getToDoLists(): List<ToDoList>
+'
+'}
 
 class Application {
 
@@ -36,7 +49,9 @@ class Application {
 
 }
 
-ToDoList o-- ToDoEntry
+ToDoList --o ToDoEntry
+' ToDoManager --o ToDoList
+' Application -- ToDoManager
 Application -- ToDoList
 
 @enduml
