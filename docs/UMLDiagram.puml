@@ -11,6 +11,8 @@ class ToDoEntry {
 + setDescription(String): void
 + getDueDate(): String
 + setDueDate(String): void
++ getStatus(): boolean
++ setStatus(boolean): void
 
 }
 
@@ -48,24 +50,30 @@ class ToDoEntry {
 
 class MenuController {
 
-    + deleteCurrentList()
-    + addList()
+    + deleteCurrentList(): void
+    + addList(): void
+    + exitApp(): void
+    + loadFromFile(): void
+    + saveToFile(): void
+    + showAbout(): void
+    + initialize(): void
 
 }
 
 class Application {
 
-    + main(String[] args)
-    + start(Stage stage)
+    + main(args: String[]): void
+    + start(stage: Stage): void
 
 }
 
 class TabController {
 
-    - entryList: List<ToDoEntry>
+    - entryList: ObservableList<ToDoEntry>
 
     + addNewEntry(ActionEvent): void
     + deleteSelectedEntry(ActionEvent): void
+    + initialize(): void
 
 }
 

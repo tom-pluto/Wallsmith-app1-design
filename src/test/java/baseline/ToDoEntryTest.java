@@ -59,4 +59,24 @@ class ToDoEntryTest {
         assertEquals(expected, actual);
 
     }
+
+    @Test
+    void setStatus() {
+
+        test.setStatus(true);
+        boolean actual = test.getStatus();
+        assertTrue(actual);
+        test.setStatus(false);
+        actual = test.getStatus();
+        assertFalse(actual);
+
+    }
+
+    @Test
+    void getStatus() {
+
+        boolean actual = test.getStatus();
+        assertFalse(actual);
+
+    }
 }

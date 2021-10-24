@@ -21,6 +21,7 @@ public class TabController {
     @FXML private TableView<ToDoEntry> table;
     @FXML private TableColumn<?, ?> columnDescription;
     @FXML private TableColumn<?, ?> columnDueDate;
+    @FXML private TableColumn<?, ?> columnCompleted;
 
     @FXML private Button addButton;
     @FXML private TextField descriptionTextField;
@@ -51,6 +52,7 @@ public class TabController {
         // Initalize entryList
         // Set columnDescription to pull out the description attribute from the ToDoEntry object
         // Set columnDueDate to pull out the dueDate attribute from the ToDoEntry object
+        // Set columnCompleted to pull out the status attribute from the ToDoEntry object
 
     }
 

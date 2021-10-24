@@ -10,15 +10,15 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="baseline.TabController">
    <children>
       <SplitPane dividerPositions="0.75" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="375.0" prefWidth="600.0">
         <items>
             <TableView fx:id="table" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="600.0">
               <columns>
-                <TableColumn fx:id="columnDescription" maxWidth="500.0" minWidth="500.0" prefWidth="75.0" text="Description" />
-                <TableColumn fx:id="columnDueDate" minWidth="100.0" prefWidth="75.0" text="Due Date" />
+                <TableColumn fx:id="columnDescription" maxWidth="-Infinity" minWidth="400.0" prefWidth="400.0" text="Description" />
+                <TableColumn fx:id="columnDueDate" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="Due Date" />
+                  <TableColumn fx:id="columnCompleted" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="Completed" />
               </columns>
             </TableView>
           <AnchorPane minHeight="-Infinity" minWidth="-Infinity">

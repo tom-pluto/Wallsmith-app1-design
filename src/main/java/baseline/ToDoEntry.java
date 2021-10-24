@@ -12,11 +12,13 @@ public class ToDoEntry {
 
     private String description;
     private String dueDate;
+    private boolean status;         // true = completed, false
 
     public ToDoEntry(String description, String dueDate) {
 
         // this.description = description
         // this.dueDate = dueDate
+        // this.status = false
 
     }
 
@@ -44,6 +46,19 @@ public class ToDoEntry {
 
         // this.dueDate = duedate
 
+    }
+
+    public void setStatus(boolean value) {
+
+        // this.status = value
+
+    }
+
+    public boolean getStatus() {
+
+        // return status
+
+        return true;
     }
 
 }
