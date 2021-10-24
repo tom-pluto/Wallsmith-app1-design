@@ -14,23 +14,27 @@ class ToDoEntry {
 
 }
 
-class ToDoList {
-' the to-do list
+' originally planned to use a ToDoList to manage a list, but I think I'll just
+' do this at runtime (see below)
+'class ToDoList {
+'' the to-do list
+'
+'- String title
+'- List<ToDoEntry> entries
+'
+'+ getTitle(): String
+'+ setTitle(String): String
+'
+'+ getEntry(int): ToDoEntry
+'+ setEntry(int, ToDoEntry): void
+'+ removeEntry(int): void
+'
+'+ getList(): List<ToDoEntry>
+'
+'}
 
-- String title
-- List<ToDoEntry> entries
-
-+ getTitle(): String
-+ setTitle(String): String
-
-+ getEntry(int): ToDoEntry
-+ setEntry(int, ToDoEntry): void
-+ removeEntry(int): void
-
-+ getList(): List<ToDoEntry>
-
-}
-
+'might implement this ToDoManger class later if it feels
+'necessary
 'class ToDoManager {
 '
 '   - int numToDoList
@@ -42,6 +46,13 @@ class ToDoList {
 '
 '}
 
+class MenuController {
+
+    + deleteCurrentList()
+    + addList()
+
+}
+
 class Application {
 
     + main(String[] args)
@@ -49,9 +60,16 @@ class Application {
 
 }
 
-ToDoList --o ToDoEntry
-' ToDoManager --o ToDoList
-' Application -- ToDoManager
-Application -- ToDoList
+class TabController {
 
+    - entryList: List<ToDoEntry>
+
+    + addNewEntry(ActionEvent): void
+    + deleteSelectedEntry(ActionEvent): void
+
+}
+
+Application -- MenuController
+MenuController -- TabController
+TabController o-- ToDoEntry
 @enduml

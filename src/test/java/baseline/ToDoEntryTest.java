@@ -1,30 +1,30 @@
 package baseline;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class ToDoEntryTest {
 
-    private ToDoEntry testEntry;
+    private ToDoEntry test;
 
     @BeforeEach
     void setUp() {
 
-        testEntry = new ToDoEntry("This is a test.", new Date(121, 9, 22));
+        test = new ToDoEntry("Test", "1999-04-02");
 
     }
 
     @Test
     void getDescription() {
 
-        String expected = "This is a test.";
-        String actual = testEntry.getDescription();
-
+        String expected = "Test";
+        String actual = test.getDescription();
         assertEquals(expected, actual);
 
     }
@@ -32,10 +32,9 @@ class ToDoEntryTest {
     @Test
     void setDescription() {
 
-        String expected = "This is still a test, but I changed something";
-        testEntry.setDescription(expected);
-        String actual = testEntry.getDescription();
-
+        String expected = "Another test";
+        test.setDescription("Another test");
+        String actual = test.getDescription();
         assertEquals(expected, actual);
 
     }
@@ -43,9 +42,8 @@ class ToDoEntryTest {
     @Test
     void getDueDate() {
 
-        Date expected = new Date(121, 9, 22);
-        Date actual = testEntry.getDueDate();
-
+        String expected = "2002-04-02";
+        String actual = test.getDueDate();
         assertEquals(expected, actual);
 
     }
@@ -53,10 +51,11 @@ class ToDoEntryTest {
     @Test
     void setDueDate() {
 
-        testEntry.setDueDate(new Date(121, 9, 23));
-        Date expected = new Date(121, 9, 23);
-        Date actual = testEntry.getDueDate();
-
+        GregorianCalendar newDate = new GregorianCalendar();
+        newDate.set(121,4, 2);
+        test.setDueDate(newDate);
+        String expected = "2021-04-02";
+        String actual = test.getDueDate();
         assertEquals(expected, actual);
 
     }

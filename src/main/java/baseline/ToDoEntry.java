@@ -6,13 +6,14 @@
 package baseline;
 
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class ToDoEntry {
 
     private String description;
-    private Date dueDate;
+    private String dueDate;
 
-    public ToDoEntry(String description, Date dueDate) {
+    public ToDoEntry(String description, String dueDate) {
 
         // this.description = description
         // this.dueDate = dueDate
@@ -32,14 +33,14 @@ public class ToDoEntry {
 
     }
 
-    public Date getDueDate() {
+    public String getDueDate() {
 
         // return dueDate
 
-        return new Date();
+        return "";
     }
 
-    public void setDueDate(Date dueDate) {
+    public void setDueDate(GregorianCalendar dueDate) {
 
         // this.dueDate = duedate
 
